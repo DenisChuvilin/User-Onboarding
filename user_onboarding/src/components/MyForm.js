@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const P = styled.p`
     color: green;
 `
-const FormStyled = styled.form `
+const Div = styled.div `
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -40,7 +40,8 @@ return (
         validationSchema ={validationSchema}
         onSubmit={handleSubmit}
         render={props => (
-            <FormStyled>
+        <Div>
+            <Form>
                 <Field type="text" name="name" placeholder="name" />
                     <P>{props.errors.name}</P>
                 <Field type="password" name="password" placeholder="password" />
@@ -56,7 +57,8 @@ return (
                     <option value="lake">lake</option>
                 </Field>
                 <button type="submit">check box if thomas is awsome!</button>
-            </FormStyled>
+            </Form>
+        </Div>
         )}
         />
         <div>users:
